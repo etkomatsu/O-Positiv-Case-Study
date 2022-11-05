@@ -1,0 +1,65 @@
+.shop-selector label {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+.shop-selector input[type="radio"] + span {
+  // position: absolute;
+  font-size: 14px;
+  width: 15px;
+  height: 15px;
+  margin-top: 3px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid;
+}
+.shop-selector input[type="radio"]:checked + span {
+  // position: absolute;
+  font-size: 14px;
+  width: 15px;
+  height: 15px;
+  margin-top: 3px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid;
+  background-color: #5c72b6;
+  content: url(https://cdn.shopify.com/s/files/1/0588/9340/2261/t/27/assets/shop-check.svg);
+}
+
+.shop-selector input[type="radio"] {
+  display: none;
+}
+
+.quantity-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.shop-selector .quantity {
+  width: 45px;
+  line-height: 33px;
+  font-size: 19px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid;
+  text-align: center;
+  color: #5c72b6;
+  background-color: #fff;
+}
+// .quantity input[type="radio"] {
+//   display: none;
+// }
+
+// .quantity input[type="radio"]:checked + label{
+//   border: solid 10px green;
+// }
+
+#selected {
+  background-color: #5c72b6;
+  color: #fff;
+  // border: solid 1px green;
+  border: solid 1px #4e4e4e;
+}
