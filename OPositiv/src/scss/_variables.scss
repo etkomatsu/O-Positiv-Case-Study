@@ -1,12 +1,22 @@
 $oPositiv-font: "Bookmania", "Times New Roman", serif;
-$purple-color:  #5c72b6;
-$green-color: #0A5E2B;
+$purple-color: #5c72b6;
+$green-color: #0a5e2b;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap");
 
+theme-purple {
+  --bg-color: $purple-color;
+}
 
-   theme-purple {
-        --bg-color: $purple-color;
-    }
-
-    theme-green {
-        --bg-color: $green-color;
-    }
+theme-green {
+  --bg-color: $green-color;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 1em;
+  margin: 0;
+  background-color: rgb(241, 240, 240);
+}
+p {
+  margin: 0;
+}

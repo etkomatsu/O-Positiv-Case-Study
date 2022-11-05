@@ -11,24 +11,38 @@ const ShopBox = (props) => {
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useState("Item Name | Type | Count \n");
   const [currentPrice, setCurrentPrice] = useState(
-    products[0].subscription_price
+    products[0].subscription_price[0]
   );
+  const [totalPrice, setTotalPrice] = useState(currentPrice * quantity);
+
   useEffect(() => {
     if (cart !== "Item Name | Type | Count \n") alert(cart);
   }, [cart]);
 
-  const handlePurchaseChange = (value) => {
+  const handlePurchaseChange = async (value) => {
     setPurchaseType(value);
-    if (value === "subscribe") {
-      setCurrentPrice(products[0].subscription_price);
     }
-    if (value === "one_time") {
-      setCurrentPrice(products[0].one_time_price);
-    }
-  };
+  
+  useEffect(() => {
+    if (purchaseType === "subscribe"){
+      setCurrentPrice(products[0].subscription_price[quantity - 1])
+    };
+    if (purchaseType=== "one_time") {
+      setCurrentPrice(products[0].one_time_price[quantity - 1]);
+    };
+  }, [purchaseType, quantity])
+
   const handleQuantityChange = (value) => {
     setQuantity(value);
+    handlePurchaseChange(purchaseType);
+    console.log("handleQuantityChange",quantity, currentPrice, totalPrice);
   };
+
+  useEffect(() => {
+    setTotalPrice(currentPrice * quantity);
+      console.log("inside use effect", currentPrice)}, 
+      [quantity, currentPrice, purchaseType])
+
   function addToCart() {
     let purchaseString;
     purchaseType === "subscribe"
@@ -48,12 +62,17 @@ const ShopBox = (props) => {
         handlePurchaseChange={handlePurchaseChange}
         handleQuantityChange={handleQuantityChange}
         quantity={quantity}
+        purchaseType={purchaseType}
       />
-      <AddToCart addToCart={addToCart} currentPrice={currentPrice} />
-      <p className="verbiage"> 60-Day Happiness Guaranteed</p>
-      <p>{purchaseType}</p>
+      <AddToCart
+        addToCart={addToCart}
+        currentPrice={currentPrice}
+        quantity={quantity}
+        totalPrice={totalPrice}
+        purchaseType={purchaseType}
+      />
+      <p className="verbiage"> 60-day happiness guaranteed</p>
       <div>
-        <ToggleTheme />
       </div>
     </div>
   );

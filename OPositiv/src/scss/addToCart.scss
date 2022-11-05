@@ -1,21 +1,42 @@
-@import '_variables.scss';
+@import "_variables.scss";
 
+.cart-button-container {
+  margin: auto;
+  width: 95%;
+  text-align: center;
 
-
-.cart-button {
-  width: 90%;
-  margin: 15px auto 0;
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-color: transparent;
-  border-radius: 50px;
-  cursor: pointer;
-  color: rgb(253, 253, 253);
-  background-color: rgb(41, 11, 149)
+  .cart-button {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 1em auto 0;
+    padding: 1em 0;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    color: rgb(253, 253, 253);
+    background-color: #5c72b6;
   }
 
+  img {
+    max-width: 6.5em;
+    height: auto;
+    position: relative;
+    top: 0.2em;
+  }
+  .afterPayText {
+    padding: 0.8em 0 0;
+    // padding-bottom: 1em;
+    text-align: center;
+    line-height: 1em;
+  }
+  strike {
+    opacity: 0.7;
+  }
+}
 //   button {
 //     appearance: auto;
 //     writing-mode: horizontal-tb !important;

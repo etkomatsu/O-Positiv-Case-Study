@@ -1,65 +1,105 @@
-.shop-selector label {
-  display: flex;
-  gap: 30px;
-  position: relative;
-}
-.shop-selector input[type="radio"] + span {
-  // position: absolute;
-  font-size: 14px;
-  width: 15px;
-  height: 15px;
-  margin-top: 3px;
-  text-align: center;
-  border-radius: 50%;
-  border: 2px solid;
-}
-.shop-selector input[type="radio"]:checked + span {
-  // position: absolute;
-  font-size: 14px;
-  width: 15px;
-  height: 15px;
-  margin-top: 3px;
-  text-align: center;
-  border-radius: 50%;
-  border: 2px solid;
-  background-color: #5c72b6;
-  content: url(https://cdn.shopify.com/s/files/1/0588/9340/2261/t/27/assets/shop-check.svg);
-}
+.shop-selector {
+  .purchase-type-header {
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-left: 0.5em;
+    font-family: "Bookmania";
+  }
 
-.shop-selector input[type="radio"] {
-  display: none;
-}
+  .purchase-type-container {
+    padding: 1em;
+    border: 0.5px solid #bfa2db;
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+    .purchase-type-subcontainer {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
 
-.quantity-container {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding: 10px;
-  transition: all 0.3s;
-}
+      .purchase-type-heading {
+        padding-bottom: 0.3em;
+        font-size: 1em;
+      }
+      .purchase-type-subheading {
+        font-size: 0.8em;
+        font-weight: 300;
+      }
 
-.shop-selector .quantity {
-  width: 45px;
-  line-height: 33px;
-  font-size: 19px;
-  cursor: pointer;
-  border-radius: 20px;
-  border: 1px solid;
-  text-align: center;
-  color: #5c72b6;
-  background-color: #fff;
-}
-// .quantity input[type="radio"] {
-//   display: none;
-// }
+      .purchase-type-free-shipping {
+        font-size: 0.85em;
+        color: #3752a3;
+      }
 
-// .quantity input[type="radio"]:checked + label{
-//   border: solid 10px green;
-// }
+      .price {
+        font-size: 1em;
+        text-align: right;
+      }
+    }
+    label {
+      display: flex;
+      margin: 10px;
+      gap: 1em;
+      position: relative;
 
-#selected {
-  background-color: #5c72b6;
-  color: #fff;
-  // border: solid 1px green;
-  border: solid 1px #4e4e4e;
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"] + span {
+        font-size: 14px;
+        width: 15px;
+        height: 15px;
+        margin-top: 3px;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid;
+      }
+      input[type="radio"]:checked + span {
+        background-color: #5c72b6;
+        content: url(https://cdn.shopify.com/s/files/1/0588/9340/2261/t/27/assets/shop-check.svg);
+      }
+    }
+  }
+  .quantity-container {
+    padding: 1em 1em;
+    border: 0.5px solid #bfa2db;
+    border-top: 0px;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+
+    .quantity-subcontainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .quantity-button-container {
+        display: flex;
+        gap: 10px;
+        padding: 0.5em 0;
+        transition: all 0.3s;
+
+        .quantity-button {
+          width: 45px;
+          line-height: 33px;
+          font-size: 19px;
+          cursor: pointer;
+          border-radius: 20px;
+          border: 1px solid;
+          text-align: center;
+          color: #5c72b6;
+          background-color: #fff;
+        }
+
+        #selected {
+          background-color: #5c72b6;
+          color: #fff;
+          border: solid 1px #4e4e4e;
+        }
+      }
+    }
+    .quantity-text {
+      padding: 0.5em 2em;
+      font-size: 15px;
+      font-weight: 200;
+    }
+  }
 }
