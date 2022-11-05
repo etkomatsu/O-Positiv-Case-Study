@@ -1,0 +1,12 @@
+$oPositiv-font: "Bookmania", "Times New Roman", serif;
+$purple-color:  #5c72b6;
+$green-color: #0A5E2B;
+
+
+   theme-purple {
+        --bg-color: $purple-color;
+    }
+
+    theme-green {
+        --bg-color: $green-color;
+    }
