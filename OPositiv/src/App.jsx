@@ -1,5 +1,5 @@
 import ShopBox from "./containers/ShopBox.jsx";
-// import styles from "/scss/maincontainer.scss"
+
 const App = () => {
 
   return (

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import products from "../components/Products.jsx";
 import style from "../scss/purchaseContainer.scss";
 

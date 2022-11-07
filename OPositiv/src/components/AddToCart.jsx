@@ -10,10 +10,10 @@ export default function AddToCart(props) {
       oneTimeText = <p className="afterPayText" ><img src={afterPay}/> available for orders above $45</p>
     }
     if (props.quantity === 2) {
-      oneTimeText = <p className="afterPayText">Only $17.50 with <img src={afterPay}/> <br></br>in 4 interest-free payments"</p>
+      oneTimeText = <p className="afterPayText">Only $17.50 with <img src={afterPay}/> <br></br>in 4 interest-free payments</p>
     }
     if (props.quantity === 3) {
-      oneTimeText = <p className="afterPayText">Only $24.75 with <img src={afterPay}/>  <br></br>in 4 interest-free payments"</p>
+      oneTimeText = <p className="afterPayText">Only $24.75 with <img src={afterPay}/>  <br></br>in 4 interest-free payments</p>
     }
   }
   let priceText;

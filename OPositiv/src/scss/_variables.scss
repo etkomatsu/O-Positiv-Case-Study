@@ -1,15 +1,6 @@
 $oPositiv-font: "Bookmania", "Times New Roman", serif;
-$purple-color: #5c72b6;
-$green-color: #0a5e2b;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap");
 
-theme-purple {
-  --bg-color: $purple-color;
-}
-
-theme-green {
-  --bg-color: $green-color;
-}
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;

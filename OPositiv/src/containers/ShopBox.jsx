@@ -4,7 +4,6 @@ import PurchaseContainer from "./PurchaseContainer.jsx";
 import { useState, useEffect } from "react";
 import styles from "../scss/shopbox.scss";
 import products from "../components/Products";
-import ToggleTheme from "../components/ToggleTheme.jsx";
 
 const ShopBox = (props) => {
   const [purchaseType, setPurchaseType] = useState("subscribe");
