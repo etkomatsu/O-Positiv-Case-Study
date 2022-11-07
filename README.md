@@ -1,8 +1,9 @@
 # O-Positiv-Case-Study
 
 ## Getting Started
-
--Clone this repository
--Install dependencies
--Create build directory "npm run build"
--Preview application "npm run preview"
+<p>
+-Clone this repository <br></br>
+-Install dependencies <br></br>
+-Create build directory "npm run build" <br></br>
+-Preview application "npm run preview" <br></br>
+</p>
