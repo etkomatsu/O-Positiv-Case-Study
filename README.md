@@ -4,6 +4,7 @@
 <p>
 -Clone this repository <br></br>
 -Install dependencies <br></br>
--Create build directory "npm run build" <br></br>
+-Create build "npm run build" <br></br>
 -Preview application "npm run preview" <br></br>
+*Can also be ran in dev mode "npm run dev"
 </p>
